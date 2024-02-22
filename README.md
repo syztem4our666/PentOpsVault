@@ -8,7 +8,7 @@
 
 ###
 
-<p align="center">My personal stash of pentesting and sysadmin notes, crafted to share insights and learning.</p>
+<p align="center">My personal stash of pentesting and sysadmin notes, crafted to share insights and learning.This project will shine over time, since my purpose is to have my notes portable anywhere, and with information researches about all thinks related with Pentesting, Networks, and Sysadmin.</p>
 
 ###
 
