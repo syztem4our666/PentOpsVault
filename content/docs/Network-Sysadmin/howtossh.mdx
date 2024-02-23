@@ -1,0 +1,72 @@
+---
+title: How to SSH 
+description: Components
+---
+
+### Create Public/Private Keys
+
+The public key goes to all the "hosts/servers" you want to be able to log in to. The private key stays secure with you; it is your password.
+
+```bash
+ ssh-keygen -t rsa -b 4096 -f ~/.ssh/my-ssh-key
+```
+
+Restrict access to your `my-ssh-key` private key so that only you can read it and nobody can write to it. (SSH will ignore it, and you will get errors if any other account can see the file)
+
+```bash
+ chmod 400 ~/.ssh/my-ssh-key
+```
+
+### Setup Your Server/Host - Linux
+
+### Copy Your Public Key to the Host
+
+```bash
+ cat ~/.ssh/my-ssh-key.pub | ssh pbaumgarten@192.168.1.107 "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
+```
+
+Or manually:
+
+* On the server, create a `~/.ssh` folder
+* Copy the public key to the above folder location
+* Append the public key to `~/.ssh/authorized_keys` in that folder
+
+### Edit SSH Server Configuration
+
+```bash
+ sudo nano /etc/ssh/sshd_config
+```
+
+Edit the following parameters:
+
+```txt
+PermitRootLogin without-password
+PasswordAuthentication no
+Protocol 2
+Port 22
+```
+
+Restart SSH service:
+
+```bash
+ sudo service ssh restart
+```
+
+### Setup Your Client/Workstation - Linux/OSX
+
+Check:
+
+* Private key in your `~/.ssh` folder?
+* Permissions set to `400`?
+
+### Setup Your Client/Workstation - Windows/PuTTY
+
+Hostname: `user@host.name.com`
+Connection > SSH > Auth: Private key for authentication: Browse to the location of your private key.
+
+### Connect - The Manual Method - Linux/OSX
+
+```bash
+ ssh -i ~/.ssh/my-ssh-key [USERNAME]@[IP_ADDRESS]
+```
+
