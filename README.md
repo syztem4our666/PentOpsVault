@@ -1,26 +1,47 @@
-# pentopsvault-notes
+<div align="center">
+  <img height="150" src="https://media.tenor.com/dHk-LfzHrtwAAAAi/linux-computer.gif"  />
+</div>
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+###
 
-Run development server:
+<h1 align="center">PentOpsVault 👾</h1>
 
-```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
-```
+###
 
-Open http://localhost:3000 with your browser to see the result.
+<p align="center">My personal stash of pentesting and sysadmin notes, crafted to share insights and learning. This project will shine over time, since my purpose is to have my notes portable anywhere, and with information research about all thinks related with Pentesting, Networks, and Sysadmin. I feel that those three things go very hand in hand, that's why it will be my curated vault notes.</p>
 
-## Learn More
+###
 
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
+<p align="center">https://pentopsvault.vercel.app/</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.vercel.app) - learn about Fumadocs
+###
+
+<h4 align="center">Technologies used:</h4>
+
+###
+
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height="40" alt="nextjs logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
+  <img width="12" />
+  <img src="https://cdn.simpleicons.org/vercel/000000" height="40" alt="vercel logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg" height="40" alt="svelte logo"  />
+  <img width="12" />
+  <img src="https://cdn.simpleicons.org/astro/FF5D01" height="40" alt="astro logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" alt="nodejs logo"  />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=tailwind" height="40" alt="tailwindcss logo"  />
+</div>
+
+###
+
+<div align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=syztem4our666.syztem4our666&"  />
+</div>
+
+###
+
+###
