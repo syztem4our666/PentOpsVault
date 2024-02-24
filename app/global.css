@@ -45,3 +45,9 @@
     font-synthesis-weight: none;
   }
 
+  .bg-gradient-to-b {
+    background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  }
+  
+ 
+  
