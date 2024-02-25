@@ -1,0 +1,12 @@
+[
+    {
+      "type": "page",
+      "name": "AWS",
+      "url": "/docs/Cloud-AWS-Azure/"
+    },
+    {
+      "type": "page",
+      "name": "Azure-Cloud",
+      "url": "/docs/Cloud-AWS-Azure/"
+    }
+  ]
