@@ -20,7 +20,7 @@ description: Components
     - [Log Management](#log-management)
     - [Resource Monitoring](#resource-monitoring)
 
-## Basics of Linux and Sysadmin
+## Basics of Linux
 
 ### Introduction
 
@@ -30,74 +30,278 @@ Linux is a widely-used open-source operating system known for its stability, sec
 
 ### File System Navigation
 
-- `cd`: Change directory
-- `ls`: List directory contents
-- `pwd`: Print working directory
+#### `cd` - Change Directory
+Change the current working directory.
+
+```bash
+cd /path/to/directory
+```
+
+#### `ls` - List Directory Contents
+List the files and directories in the current directory.
+
+```bash
+ls
+```
+
+#### `pwd` - Print Working Directory
+Display the current working directory.
+
+```bash
+pwd
+```
 
 ### File Operations
 
-- `cp`: Copy files and directories
-- `mv`: Move or rename files and directories
-- `rm`: Remove files and directories
-- `touch`: Create an empty file
-- `mkdir`: Create a new directory
+#### `cp` - Copy Files and Directories
+Copy files and directories from one location to another.
+
+```bash
+cp file1 file2
+```
+
+#### `mv` - Move or Rename Files and Directories
+Move or rename files and directories.
+
+```bash
+mv file1 newfile
+```
+
+#### `rm` - Remove Files and Directories
+Delete files and directories.
+
+```bash
+rm file1
+```
+
+#### `touch` - Create an Empty File
+Create a new empty file.
+
+```bash
+touch newfile.txt
+```
+
+#### `mkdir` - Create a New Directory
+Create a new directory.
+
+```bash
+mkdir newdir
+```
 
 ### Text Editing
 
-- `nano`: Simple text editor
-- `vim` or `vi`: Powerful text editor (vim is the improved version of vi)
+#### `nano` - Simple Text Editor
+Edit text files using the nano text editor.
+
+```bash
+nano filename.txt
+```
+
+#### `vim` or `vi` - Powerful Text Editor
+Edit text files using the vim or vi text editor.
+
+```bash
+vim filename.txt
+```
 
 ### System Information
 
-- `uname`: Display system information
-- `hostname`: Display or set the system's hostname
-- `uptime`: Show how long the system has been running
-- `free`: Display amount of free and used memory in the system
+#### `uname` - Display System Information
+Display system information such as kernel name, hostname, kernel release, kernel version, machine hardware name, and processor type.
+
+```bash
+uname -a
+```
+
+#### `hostname` - Display or Set the System's Hostname
+Display or set the system's hostname.
+
+```bash
+hostname
+```
+
+#### `uptime` - Show System Uptime
+Show how long the system has been running.
+
+```bash
+uptime
+```
+
+#### `free` - Display Memory Usage
+Display the amount of free and used memory in the system.
+
+```bash
+free -h
+```
 
 ### User Management
 
-- `whoami`: Display the current username
-- `who`: Display who is logged in
-- `users`: List users currently logged in
-- `sudo`: Execute a command as another user (usually superuser)
+#### `whoami` - Display Current Username
+Display the current username.
+
+```bash
+whoami
+```
+
+#### `who` - Display Logged-In Users
+Display who is logged in.
+
+```bash
+who
+```
+
+#### `users` - List Users Currently Logged In
+List users currently logged in.
+
+```bash
+users
+```
+
+#### `sudo` - Execute a Command as Another User (Usually Superuser)
+Execute a command as another user, usually the superuser.
+
+```bash
+sudo command
+```
 
 ### Process Management
 
-- `ps`: Display information about running processes
-- `top`: Display dynamic real-time view of system processes
-- `kill`: Terminate processes by ID or name
+#### `ps` - Display Process Information
+Display information about running processes.
+
+```bash
+ps aux
+```
+
+#### `top` - Display Dynamic Real-Time View of System Processes
+Display a dynamic real-time view of system processes.
+
+```bash
+top
+```
+
+#### `kill` - Terminate Processes by ID or Name
+Terminate processes by process ID (PID) or process name.
+
+```bash
+kill PID
+```
 
 ## Networking
 
-## Network Configuration
+### Network Configuration
 
-- `ifconfig`: Display or configure network interfaces
-- `ip`: Show or manipulate routing, devices, policy routing, and tunnels
-- `ping`: Send ICMP ECHO_REQUEST to network hosts
-- `traceroute`: Print the route packets trace to network host
+#### `ifconfig` - Display or Configure Network Interfaces
+Display or configure network interfaces.
 
+```bash
+ifconfig
+```
+
+#### `ip` - Show or Manipulate Routing, Devices, Policy Routing, and Tunnels
+Show or manipulate routing, devices, policy routing, and tunnels.
+
+```bash
+ip addr show
+```
+
+#### `ping` - Send ICMP ECHO_REQUEST to Network Hosts
+Send ICMP ECHO_REQUEST packets to network hosts.
+
+```bash
+ping hostname
+```
+
+#### `traceroute` - Print the Route Packets Trace to Network Host
+Print the route packets trace to network host.
+
+```bash
+traceroute hostname
+```
 
 ## Firewall Management
 
-- `iptables`: Tool for IPv4 packet filtering and NAT
-- `ufw`: Uncomplicated Firewall, a user-friendly interface for managing iptables
+#### `iptables` - Tool for IPv4 Packet Filtering and NAT
+Manage IPv4 packet filtering and NAT rules.
+
+```bash
+iptables -L
+```
+
+#### `ufw` - Uncomplicated Firewall
+User-friendly interface for managing iptables.
+
+```bash
+ufw status
+```
 
 ## DNS
 
-- `nslookup`: Query Internet name servers interactively
-- `dig`: DNS lookup utility
-- `host`: DNS lookup utility
+#### `nslookup` - Query Internet Name Servers Interactively
+Query Internet name servers interactively.
+
+```bash
+nslookup example.com
+```
+
+#### `dig` - DNS Lookup Utility
+Perform DNS lookups.
+
+```bash
+dig example.com
+```
+
+#### `host` - DNS Lookup Utility
+Perform DNS lookups.
+
+```bash
+host example.com
+```
 
 ## System Monitoring
 
 ### Log Management
 
-- `tail`: Output the last part of files
-- `grep`: Search for patterns in files
-- `journalctl`: Query the systemd journal
+#### `tail` - Output the Last Part of Files
+Output the last part of files.
+
+```bash
+tail -n 10 filename.log
+```
+
+#### `grep` - Search for Patterns in Files
+Search for patterns in files.
+
+```bash
+grep pattern filename.log
+```
+
+#### `journalctl` - Query the systemd Journal
+Query the systemd journal for log entries.
+
+```bash
+journalctl -u service-name
+```
 
 ### Resource Monitoring
 
-- `htop`: Interactive process viewer
-- `iotop`: Monitor I/O usage by processes
-- `iftop`: Display bandwidth usage on an interface
+#### `htop` - Interactive Process Viewer
+Interactive process viewer for system monitoring.
+
+```bash
+htop
+```
+
+#### `iotop` - Monitor I/O Usage by Processes
+Monitor I/O usage by processes.
+
+```bash
+iotop
+```
+
+#### `iftop` - Display Bandwidth Usage on an Interface
+Display bandwidth usage on a network interface.
+
+```bash
+iftop
+```
