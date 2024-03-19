@@ -5,7 +5,7 @@ import type { ReactNode } from 'react';
 export default function RootDocsLayout({ children }: { children: ReactNode }) {
   return (
     <DocsLayout tree={pageTree} nav={{ title: (
-      <span>PentOpsVault</span> 
+      <span>PentOpsVault 👾</span> 
     ) }}>
       {children}
     </DocsLayout>
