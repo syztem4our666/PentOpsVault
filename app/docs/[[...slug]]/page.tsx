@@ -26,6 +26,7 @@ export default async function Page({
   );
 }
 
+
 export async function generateStaticParams() {
   return getPages().map((page) => ({
     slug: page.slugs,

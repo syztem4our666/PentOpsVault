@@ -2,6 +2,7 @@
     {
       "type": "page",
       "name": "AWS",
+      "root": true,
       "url": "/docs/Network-Sysadmin/"
     },
     {

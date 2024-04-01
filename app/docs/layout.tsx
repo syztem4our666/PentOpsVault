@@ -10,6 +10,7 @@ export default function RootDocsLayout({ children }: { children: ReactNode }) {
       {children}
     </DocsLayout>
   );
+  
 }
 
 
