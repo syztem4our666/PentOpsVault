@@ -4,14 +4,15 @@ export default function HomePage() {
   return (
     <section className="w-full h-screen flex flex-col justify-center py-12 md:py-24 lg:py-32 xl:py-48 relative">
       {/* Div para el fondo de GIF */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 flex justify-center items-center" style={{ marginTop: "-45vh" }}>
         <img
-          src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXhhdGszeGkwNnl0eDljdzkwcWFkaXljeGVyOWN6Y2Jtb25zNm1sMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U4FkC2VqpeNRHjTDQ5/giphy.gif"
+          src="https://media3.giphy.com/media/ujD9uqqj3Grtr11afG/giphy.gif"
           alt="Background GIF"
-          className="w-full h-full object-cover"
-          style={{ position: 'absolute', inset: 0, zIndex: -1 }}
+          className="w-24 h-auto sm:w-32 sm:h-auto md:w-40 md:h-auto lg:w-48 lg:h-auto xl:w-56 xl:h-auto object-cover"
+          style={{ zIndex: -1 }}
         />
       </div>
+
       {/* Contenido de la sección */}
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center space-y-4 text-center">
