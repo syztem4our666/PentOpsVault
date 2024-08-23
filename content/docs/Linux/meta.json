@@ -1,0 +1,13 @@
+[
+    {
+      "type": "page",
+      "name": "AWS",
+      "root": true,
+      "url": "/docs/Network-Sysadmin/"
+    },
+    {
+      "type": "page",
+      "name": "Azure-Cloud",
+      "url": "/docs/Network-Sysadmin/"
+    }
+  ]

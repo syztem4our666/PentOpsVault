@@ -1,0 +1,53 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --font-geist-mono: 'Monaco', monospace; /* Define la fuente monoespaciada */
+  --font-geist-sans: 'Helvetica Neue', sans-serif; /* Define la fuente sans-serif */
+}
+
+.dark {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --popover: 0 0% 4%;
+  --card: 0 0% 4%;
+  --muted: 0 0% 8%;
+  --border: 0 0% 14%;
+  --accent: 0 0% 15%;
+  --accent-foreground: 0 0% 100%;
+  --muted-foreground: 0 0% 60%;
+}
+
+.ui {
+  --primary: 220 80% 30%;
+}
+
+.dark .ui {
+  --primary: 220 100% 80%;
+}
+
+.headless {
+  --primary: 250 80% 30%;
+}
+
+.dark .headless {
+  --primary: 250 100% 80%;
+}
+
+.mdx {
+  --primary: 0 0% 9%;
+}
+
+.dark .mdx {
+  --primary: 0 0% 100%;
+}
+
+body {
+  font-family: var(--font-geist-sans); 
+}
+  
+code, pre {
+  font-family: var(--font-Fira); /* Aplica la fuente monoespaciada a elementos de código */
+}
+  
