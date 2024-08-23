@@ -1,26 +1,9 @@
-# build-beta
+![Descripción de la imagen](https://repository-images.githubusercontent.com/846582563/231d5c11-d52c-45c9-8761-3d1e04645a19)
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+<div align="center">
 
-Run development server:
+### PentOpsVault GitBook
 
-```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
-```
+<a href="https://pentopsvault.vercel.app/docs">https://pentopsvault.vercel.app/docs</a>
 
-Open http://localhost:3000 with your browser to see the result.
-
-## Learn More
-
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.vercel.app) - learn about Fumadocs
+</div>
