@@ -14,7 +14,7 @@ export const baseOptions: HomeLayoutProps = {
           className="w-6 h-6" // Ajusta el tamaño del GIF (8x8 rem)
         />
         {/* Title */}
-        <span className="text-white">PentOpsVault</span>
+        <span className="text-purple">PentOpsVault</span>
       </div>
     ),
   },
