@@ -14,6 +14,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <html lang="en" className={inter.className} suppressHydrationWarning>
       <body>
         <RootProvider>{children}</RootProvider>
+        <Analytics />
       </body>
     </html>
   );
