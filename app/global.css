@@ -3,8 +3,8 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --font-geist-mono: 'Monaco', monospace; /* Define la fuente monoespaciada */
-  --font-geist-sans: 'Helvetica Neue', sans-serif; /* Define la fuente sans-serif */
+  --font-geist-mono: 'Monaco', monospace; 
+  --font-geist-sans: 'Helvetica Neue', sans-serif; 
 }
 
 .dark {
@@ -48,6 +48,6 @@ body {
 }
   
 code, pre {
-  font-family: var(--font-Fira); /* Aplica la fuente monoespaciada a elementos de código */
+  font-family: var(--font-geist-sans); /* Aplica la fuente monoespaciada a elementos de código */
 }
 

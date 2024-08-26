@@ -47,14 +47,13 @@ export default function HomePage() {
               {/* Navigation Links */}
               <div className="flex justify-center space-x-4 mt-4">
                 <Link href="/docs" className="text-blue-400 hover:text-blue-300">Home</Link>
-                <Link href="/blog" className="text-blue-400 hover:text-blue-300">Blog</Link>
                 <Link href="/docs" className="text-blue-400 hover:text-blue-300">Vault</Link>
               </div>
               {/* Social Links */}
               <div className="flex justify-center space-x-4 mt-4">
                 <a href="https://github.com/syztem4our666" target="_blank" rel="noopener noreferrer">
                   <img
-                    src="https://img.icons8.com/material-outlined/24/ffffff/github.png" // Reemplaza esto con el ícono de GitHub
+                    src="https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=000000" // Reemplaza esto con el ícono de GitHub
                     alt="GitHub"
                     className="w-8 h-8"
                   />
