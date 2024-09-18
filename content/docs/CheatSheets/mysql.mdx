@@ -2,7 +2,146 @@
 title: MySQL CheatSheet
 description: CheatSheet
 ---
+#### Creating a Database: CREATE DATABASE
 
+To create a database, use:
+```sql
+CREATE DATABASE database_name;
+```
+
+Example:
+```sql
+CREATE DATABASE company;
+```
+
+Output:
+```sql
+MariaDB [(none)]> CREATE DATABASE company;
+Query OK, 1 row affected (0.001 sec)
+```
+
+To show databases, use:
+```sql
+SHOW DATABASES;
+```
+
+Output:
+```sql
+MariaDB [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| company            |
+| sys                |
++--------------------+
+5 rows in set (0.000 sec)
+```
+
+To use the created database "company", use:
+```sql
+USE database_name;
+```
+
+Example:
+```sql
+USE company;
+
+MariaDB [(none)]> USE company;
+Database changed
+```
+
+#### Creating a Table and Showing its Fields (CREATE TABLE - SHOW TABLES - DESCRIBE - DROP TABLE)
+
+*A database stores its data in tables. This is a data structure that organizes data in columns and rows; each column is a field (or attribute) and each row, a record. The intersection of a column with a row contains a specific data value.*
+
+To create a table, use:
+```sql
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    ...
+);
+```
+
+Example:
+```sql
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50),
+    emp_salary DECIMAL(10, 2),
+    emp_hire_date DATE
+);
+```
+
+To describe the table, use:
+```sql
+DESCRIBE table_name;
+```
+
+Output:
+```sql
+MariaDB [company]> DESCRIBE employees;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| emp_id      | int(11)      | NO   | PRI | NULL    |       |
+| emp_name    | varchar(50)  | YES  |     | NULL    |       |
+| emp_salary  | decimal(10,2)| YES  |     | NULL    |       |
+| emp_hire_date | date       | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+4 rows in set (0.006 sec)
+```
+
+To show all tables in the database, use:
+```sql
+SHOW TABLES;
+```
+
+Output:
+```sql
+MariaDB [company]> SHOW TABLES;
++--------------------+
+| Tables_in_company  |
++--------------------+
+| employees          |
++--------------------+
+1 row in set (0.001 sec)
+```
+
+#### Loading Records into a Table and Retrieving Them (INSERT INTO – SELECT)
+
+To insert a record into a table, use:
+```sql
+INSERT INTO table_name (column1, column2, ...)
+VALUES (value1, value2, ...);
+```
+
+Example:
+```sql
+INSERT INTO employees (emp_id, emp_name, emp_salary, emp_hire_date)
+VALUES (1, 'John Doe', 75000.00, '2022-01-15');
+
+Query OK, 1 row affected (0.016 sec)
+```
+
+To select all records from a table, use:
+```sql
+SELECT * FROM table_name;
+```
+
+Output:
+```sql
+MariaDB [company]> SELECT * FROM employees;
++--------+----------+------------+--------------+
+| emp_id | emp_name | emp_salary | emp_hire_date|
++--------+----------+------------+--------------+
+|      1 | John Doe |   75000.00 | 2022-01-15   |
++--------+----------+------------+--------------+
+1 row in set (0.001 sec)
+```
 ### Data Types
 
 Data Type | Description | Range / Size
