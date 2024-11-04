@@ -6,12 +6,7 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <main className="relative h-screen w-screen overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <Spline
-          scene="https://prod.spline.design/8MFS7NbPCqNVsd8j/scene.splinecode" 
-          style={{ width: '98%', height: '110%' }} 
-        />
-      </div>
+      
       <section className="relative z-10 flex items-center justify-center w-full h-full">
         <div className="container px-4 md:px-6 text-center flex flex-col items-center justify-center space-y-6">
           {/* GIF Image and Heading */}
