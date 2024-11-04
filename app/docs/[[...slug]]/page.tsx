@@ -27,7 +27,7 @@ export default async function Page({
       full={page.data.full}
       editOnGithub={{
         repo: "",
-        owner: "fabianhug",
+        owner: "syztem4our666",
         sha: "main",
         path,
       }}

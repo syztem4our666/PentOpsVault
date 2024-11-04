@@ -2,144 +2,142 @@
 title: SSH
 description: Linux
 ---
-### SSH Commands and Tips
+### SSH Service
 
-#### Escape Sequences
+#### Start SSH service
 
-Supported escape sequences:
 ```bash
-~.    - Terminate connection (and any multiplexed sessions)
-~B    - Send a BREAK to the remote system
-~C    - Open a command line
-~R    - Request rekey (SSH protocol 2 only)
-~^Z   - Suspend ssh
-~#    - List forwarded connections
-~&    - Background ssh (when waiting for connections to terminate)
-~?    - Display this message
-~~    - Send the escape character by typing it twice
+(sudo) service ssh start
 ```
 
-#### File Comparison
+#### Check SSH service status
 
-Compare a remote file with a local file:
 ```bash
-ssh user@host cat /path/to/remotefile | diff /path/to/localfile -
+(sudo) service ssh status
 ```
 
-#### SSH Connection Through a Middle Host
+#### Stop SSH service
 
-Connect to a remote host through an intermediary:
 ```bash
-ssh -t reachable_host ssh unreachable_host
+(sudo) service ssh stop
 ```
 
-#### Run Command on Remote Host
+#### Restart SSH service
 
-Execute a command on a remote host using a local script:
 ```bash
-cat > cmd.txt << __EOF__
-cat /etc/hosts
-__EOF__
-
-ssh host -l user $(<cmd.txt)
+(sudo) service ssh restart
 ```
 
-#### Key Management
+#### Open config file (usual location)
 
-Get public key from a private key:
 ```bash
-ssh-keygen -y -f ~/.ssh/id_rsa
+sudo nano /etc/ssh/sshd_config
 ```
 
-Get all fingerprints:
+### SSH Keys
+
+#### Generate a new SSH key
+
 ```bash
-ssh-keygen -l -f .ssh/known_hosts
+ssh-keygen -t rsa -b 4096
 ```
 
-#### Authentication
+#### Send the key to the server
 
-##### User Password Authentication
 ```bash
-ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no user@remote_host
+ssh-copy-id user@server
 ```
 
-##### Public Key Authentication
+#### Convert id_rsa into PPK
+
 ```bash
-ssh -o PreferredAuthentications=publickey -o PubkeyAuthentication=yes -i id_rsa user@remote_host
+puttygen current_key -o keyname.ppk
 ```
 
-#### Session Logging
+### SSH Connections
 
-Record an SSH session:
+#### Connect to a server (default port 22)
+
 ```bash
-function _ssh_sesslog() {
-  _sesdir="<path/to/session/logs>"
-
-  mkdir -p "${_sesdir}" && \
-  ssh $@ 2>&1 | tee -a "${_sesdir}/$(date +%Y%m%d).log"
-}
-
-### Alias
-alias ssh='_ssh_sesslog'
+ssh user@server
 ```
 
-#### Using Keychain for SSH Logins
+#### Use a specific port declared in sshd_config
 
-##### Delete All SSH Keys from Keychain
 ```bash
-function _scl() {
-  /usr/bin/keychain --clear
-}
+ssh user@server -p other_port
 ```
 
-### Add Key to Keychain
+#### Run a script on a remote server
+
 ```bash
-function _scg() {
-  /usr/bin/keychain /path/to/private-key
-  source "$HOME/.keychain/$HOSTNAME-sh"
-}
+ssh user@server script_to_run
 ```
 
-#### SSH Login Without Processing Login Scripts
+#### Compress and download from a remote server
 
-Log in without executing any login scripts:
 ```bash
-ssh -tt user@host bash
+ssh user@server "tar cvzf - ~/source" > output.tgz
 ```
 
-#### Port Forwarding
+#### Specify another SSH key for connection
 
-##### Local Port Forwarding
-
-**Example 1:** Forward local port 2250 to `nmap.org:443` through localhost:
 ```bash
-ssh -L 2250:nmap.org:443 localhost
-```
-Connect to the service:
-```bash
-curl -Iks --location -X GET https://localhost:2250
+ssh -i ~/.ssh/specific_ssh_fkey
 ```
 
-**Example 2:** Forward local port 9051 to `db.d.x:5432` through `node.d.y`:
+### SCP (Secure Copy)
+
+#### Copy a file from a remote server to a local machine
+
 ```bash
-ssh -nNT -L 9051:db.d.x:5432 node.d.y
-```
-Connect to the service:
-```bash
-psql -U db_user -d db_dev -p 9051 -h localhost
+scp user@server:/directory/file.ext local_destination/
 ```
 
-* `-n` - Redirects stdin from `/dev/null`
-* `-N` - Do not execute a remote command
-* `-T` - Disable pseudo-terminal allocation
+#### Copy a file between two servers
 
-##### Remote Port Forwarding
-
-**Example:** Forward local port 9051 to `db.d.x:5432` from `host2` through `node.d.y`:
 ```bash
-ssh -nNT -R 9051:db.d.x:5432 node.d.y
+scp user@server:/dir/file.ext user@server:/dir
 ```
-Connect to the service:
+
+#### Copy a file from a local machine to a remote server
+
 ```bash
-psql -U postgres -d postgres -p 8000 -h localhost
+scp local_destination/file.ext user@server:/directory
+```
+
+#### Use a specific port declared for SSH in sshd_config
+
+```bash
+scp -P port
+```
+
+#### Copy recursively a whole folder
+
+```bash
+scp -r user@server:/directory local_destination/
+```
+
+#### Copy all files from a folder
+
+```bash
+scp user@server:/directory/* local_destination/
+```
+
+#### Copy all files from a server folder to the current folder
+
+```bash
+scp user@server:/directory/* .
+```
+
+#### Compress data on network using gzip
+
+```bash
+scp -C
+```
+
+#### Print verbose info about the current transfer
+
+```bash
+scp -v
 ```
