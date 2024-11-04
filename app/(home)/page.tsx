@@ -1,4 +1,4 @@
-import Spline from '@splinetool/react-spline/next';
+import Spline from "@splinetool/react-spline";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
