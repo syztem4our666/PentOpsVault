@@ -26,9 +26,9 @@ export default function Page(): React.ReactElement {
         className="h-[300px] p-8 md:h-[400px] md:p-12"
         style={{
           backgroundImage: [
-            "radial-gradient(circle at 70% 10%, rgba(50,50,50,0.6), transparent)",
-            "radial-gradient(circle at 0% 80%, rgba(50, 0, 100, 0.6), transparent)",
-            "radial-gradient(circle at 50% 50%, rgba(10,10,10,0.3), transparent)",
+            "radial-gradient(circle at 70% 10%, rgba(144, 238, 144, 0.6), transparent)",
+            "radial-gradient(circle at 0% 80%, rgba(169, 169, 169, 0.6), transparent)",
+            "radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.3), transparent)",
             `url("data:image/svg+xml,${encodeURIComponent(svg)}")`,
           ].join(", "),
         }}
@@ -36,9 +36,6 @@ export default function Page(): React.ReactElement {
         <h1 className="mb-4 border-b-4 border-fd-foreground pb-2 text-4xl font-bold md:text-5xl">
           @syztem4our666 blog
         </h1>
-        <p className="text-sm md:text-base">
-          Sometimes I like to write about things.
-        </p>
       </div>
       <div className="grid grid-cols-1 border md:grid-cols-3 lg:grid-cols-4">
         {posts.map((post) => (
