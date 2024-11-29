@@ -1,60 +1,67 @@
 ---
 title: Index
 description: Index of this GitBook
-author: 0xfabs
+icon: HomeIcon
 ---
 import { File, Folder, Files } from 'fumadocs-ui/components/files';
 import { CpuIcon, GalleryVerticalEnd, BookOpen, Terminal, Users, Lightbulb, Target, Book, PlusCircle, Edit, CheckSquare, Bug, Image, PenTool } from 'lucide-react';
 import { Card, Cards } from '@/components/card';
+import GridPattern from "@/components/ui/grid-pattern";
+import { BorderBeam } from "@/components/ui/border-beam";
+import ShimmerButton from "@/components/ui/shimmer-button";
 
-# Welcome to PentOpsVault
+<div className="relative flex h-[200px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+        Welcome
+      </span>
+      <BorderBeam size={250} duration={12} delay={9} />
+    </div>
 <Callout>This is my personal GitBook for pentesting, network security, and system administration. Here, you'll find a curated collection of notes, tools, and resources.</Callout>
-
 ## Index
 
 <Cards>
 
-<Card icon={<Book className="text-purple-300" />} title="Blog">
+<Card icon={<Book className="text-gray-300" />} title="Blog">
 Explore articles and trends in [blog](/blog).
 </Card>
 
-<Card icon={<Terminal className="text-purple-300" />} title="GitHub">
+<Card icon={<Terminal className="text-gray-300" />} title="GitHub">
 Check some projects on [GitHub](https://github.com/syztem4our666/).
 </Card>
 
-<Card icon={<Book className="text-purple-300" />} title="CheatSheets">
+<Card icon={<Book className="text-gray-300" />} title="CheatSheets">
 Access useful tips and commands on [CheatSheets](/docs/CheatSheets/docker).
 </Card>
 
-<Card icon={<Book className="text-purple-300" />} title="Additional-Resources">
+<Card icon={<Book className="text-gray-300" />} title="Additional-Resources">
 Discover extra resources in [Additional-Resources](/docs/additional-Resources/resources).
 </Card>
 
-<Card icon={<Book className="text-purple-300" />} title="Linux">
+<Card icon={<Book className="text-gray-300" />} title="Linux">
 Learn essential Linux commands in our [Linux](/docs/Linux/commands) guide.
 </Card>
 
-<Card icon={<Book className="text-purple-300" />} title="Networks">
+<Card icon={<Book className="text-gray-300" />} title="Networks">
 Explore subnetting and networking concepts in [Networks](/docs/NetWorks/subnets).
 </Card>
 
-<Card icon={<Book className="text-purple-300" />} title="Pentesting-Linux">
+<Card icon={<Book className="text-gray-300" />} title="Pentesting-Linux">
 Find basic Linux enumeration techniques in [Pentesting-Linux](/docs/Pentesting-Linux/Basicenumeration).
 </Card>
 
-<Card icon={<Book className="text-purple-300" />} title="Pentesting-Networks">
+<Card icon={<Book className="text-gray-300" />} title="Pentesting-Networks">
 Dive into network enumeration in [Pentesting-Networks](/docs/pentesting-Networks/enumeration).
 </Card>
 
-<Card icon={<Book className="text-purple-300" />} title="Pentesting-Web">
+<Card icon={<Book className="text-gray-300" />} title="Pentesting-Web">
 Dive into web enumeration in [Pentesting-Web](/docs/Pentesting-Web/file).
 </Card>
 
-<Card icon={<Book className="text-purple-300" />} title="Pentesting-Windows & AD">
+<Card icon={<Book className="text-gray-300" />} title="Pentesting-Windows & AD">
 Dive into Windows and Active Directory in [Pentesting-Windows & AD](/docs/Pentesting-Windows-AD/attacks).
 </Card>
 
-<Card icon={<Book className="text-purple-300" />} title="Writeups">
+<Card icon={<Book className="text-gray-300" />} title="Writeups">
 Check some writeups on [Writeups](/docs/Writeups/HackTheBox/htbiclean).
 </Card>
 

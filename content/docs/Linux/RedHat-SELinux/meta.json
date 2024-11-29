@@ -1,8 +1,4 @@
-[
-    {
-      "type": "folder",
-      "name": "AWS",
-      "root": true,
-      "url": "/docs/Network-Sysadmin/"
-    }
-]
+{
+  "title": "Linux",
+  "icon": "TerminalIcon"
+}

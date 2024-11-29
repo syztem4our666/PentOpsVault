@@ -1,8 +1,9 @@
 [
     {
       "type": "page",
-      "name": "AWS",
+      "name": "CheatSheets",
       "root": true,
+      "icon": "book",
       "url": "/docs/CheatSheets/"
     },
     {
